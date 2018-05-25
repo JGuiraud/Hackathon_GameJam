@@ -25,6 +25,6 @@ export default {
 <style>
 .container-chat-conversation {
   display: flex;
-  height: 100vh;
+  height: 92vh;
 }
 </style>
