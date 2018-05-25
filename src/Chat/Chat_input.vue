@@ -5,9 +5,7 @@
 				<div>
 					<input type="text" class="chat-input" placeholder="Type here...">
 				</div>
-				<div>
-					<chat-input-button icons="icons"/>
-				</div>
+				<chat-input-button :icons="icons"/>
 			</div>
 		</div>
 	</div>
@@ -21,11 +19,11 @@
 			ChatInputButton
 		},
 		computed : {
-			icons: () => {
+			icons: function() {
 				const icons = [
 					{
 						name:"add files",
-						icon:"add_files"
+						icon:"fas fa-copy"
 					},
 					{
 						name:"add files",
@@ -57,6 +55,8 @@
 <style>
 	.chat-container{
 		border-top: 1px solid #DEDEDE;
+		display: flex;
+		flex-direction: row;
 	}
 	.chat-input{
 		margin: 0.5em;
