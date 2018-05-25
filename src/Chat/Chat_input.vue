@@ -1,6 +1,6 @@
 <template>
 	<div>
-			<div class="col-sm-12 chat-container">
+			<div class="col-sm-12 chat-input-container">
 				<div>
 					<input type="text" class="chat-input" placeholder="Type here...">
 				</div>
@@ -51,8 +51,7 @@
 </script>
 
 <style>
-	.chat-container{
-		margin: 1em 0;
+	.chat-input-container{
 		border-top: 1px solid #DEDEDE;
 		display: flex;
 		flex-direction: row;
