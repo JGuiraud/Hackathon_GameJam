@@ -24,23 +24,19 @@
 						icon:"fas fa-clone"
 					},
 					{
-						name:"add files",
-						icon:"add_files"
-					},
-					{
-						name:"add files",
+						name:"smiley",
 						icon:"far fa-smile"
 					},
 					{
-						name:"add files",
+						name:"vocal message",
 						icon:"fas fa-microphone"
 					},
 					{
-						name:"add files",
+						name:"take picture",
 						icon:"fas fa-camera"
 					},
 					{
-						name:"add files",
+						name:"Like !",
 						icon:"far fa-thumbs-up"
 					},
 				]
