@@ -1,5 +1,7 @@
 <template>
-<h2>jkdjklds</h2>
+<div>
+   <navbar/>
+</div>
 </template>
 
 <script>
