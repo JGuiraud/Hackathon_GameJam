@@ -10,6 +10,13 @@
       <conversationsUser/>
       <conversationsUser/>
       <conversationsUser/>
+      <conversationsUser/>
+      <conversationsUser/>
+      <conversationsUser/>
+      <conversationsUser/>
+      <conversationsUser/>
+      <conversationsUser/>
+      <conversationsUser/>
    </div>
 </div>
 </template>
@@ -25,6 +32,11 @@ export default {
 </script>
 
 <style>
+.conversations-users {
+  height: 86vh;
+  overflow: scroll;
+}
+
 .conversations-status-bar {
   height: 50px;
   margin: 0;
