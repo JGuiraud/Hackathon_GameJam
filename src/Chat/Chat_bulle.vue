@@ -1,8 +1,8 @@
 <template>
-   <div class="chat-user">
-      <img class="guy" src="../assets/guy.jpg" alt="">
-      <span class="chat-bulle">hello world</span>
-   </div>
+		<div class="chat-user">
+			<img class="guy" src="../assets/girl.jpeg" alt="">
+			<span class="chat-bulle chat-bulle-user">hello world</span>
+		</div>
 </template>
 
 <script>
@@ -19,14 +19,24 @@ export default {
   justify-content: flex-end;
 }
 .chat-user {
-  margin-bottom: 1em;
   margin-left: 0.6em;
+  margin-top: 0.1em;
   /*flex-grow: 1;*/
 }
 .chat-bulle {
-  background-color: #dedede;
-  padding: 0.5em;
-  border-radius: 10px;
+  /* padding: 0.5em; */
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 30px;
+  color: rgb(24, 24, 24);
+  font-size: 14px;
+  width: 80%;
+}
+.chat-bulle-user {
+  color: white;
+  background-color: #1787fb;
 }
 .guy {
   margin-right: 0.5em;

@@ -5,18 +5,7 @@
             <chat-bulle/>
             <chat-bulle/>
             <chat-bulle/>
-            <chat-bulle/>
-            <chat-bulle/>
-            <chat-bulle/>
-            <chat-bulle/>
-            <chat-bulle/>
-            <chat-bulle/>
-            <chat-bulle/>
-            <chat-bulle/>
-            <chat-bulle/>
-            <chat-bulle/>
-            <chat-bulle/>
-            <chat-bulle/>
+            <chat-bulle-user/>
             <chat-bulle/>
             <chat-bulle/>
             <chat-bulle/>
@@ -29,12 +18,14 @@
 
 <script>
 import ChatBulle from "./Chat_bulle";
+import ChatBulleUser from "./Chat_bulle_user";
 import ChatInput from "./Chat_input";
 export default {
   name: "Chat",
   components: {
     ChatBulle,
-    ChatInput
+    ChatInput,
+    ChatBulleUser
   }
 };
 </script>
