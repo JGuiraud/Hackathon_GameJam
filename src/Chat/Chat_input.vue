@@ -1,13 +1,11 @@
 <template>
-	<div>
-		<div class="row">
+	<div class="container">
 			<div class="col-sm-12 chat-container">
 				<div>
 					<input type="text" class="chat-input" placeholder="Type here...">
 				</div>
 				<chat-input-button :icons="icons"/>
 			</div>
-		</div>
 	</div>
 </template>
 
