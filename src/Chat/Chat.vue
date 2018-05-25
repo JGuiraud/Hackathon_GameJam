@@ -1,14 +1,16 @@
 <template>
 	<div>
-		<chat-input-bar />
+		<h1>hello</h1>
+		<chat-input/>
 	</div>
 </template>
 
 <script>
-	import ChatInputBar from "./Chat_input_bar"
+	import ChatInput from "./Chat_input"
 	export default {
+		name: "Chat",
 		components: {
-			ChatInputBar,
+			ChatInput,
 		}
 	}
 </script>
