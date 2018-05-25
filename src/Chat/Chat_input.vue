@@ -10,44 +10,40 @@
 </template>
 
 <script>
-import ChatInputButton from "./Chat_input_button";
-export default {
-  name: "ChatInput",
-  components: {
-    ChatInputButton
-  },
-  computed: {
-    icons: function() {
-      const icons = [
-        {
-          name: "add files",
-          icon: "fas fa-clone"
-        },
-        {
-          name: "add files",
-          icon: "add_files"
-        },
-        {
-          name: "add files",
-          icon: "far fa-smile"
-        },
-        {
-          name: "add files",
-          icon: "fas fa-microphone"
-        },
-        {
-          name: "add files",
-          icon: "fas fa-camera"
-        },
-        {
-          name: "add files",
-          icon: "far fa-thumbs-up"
-        }
-      ];
-      return icons;
-    }
-  }
-};
+	import	ChatInputButton from "./Chat_input_button"
+	export default {
+		name: "ChatInput",
+		components: {
+			ChatInputButton
+		},
+		computed : {
+			icons: function() {
+				const icons = [
+					{
+						name:"add files",
+						icon:"fas fa-clone"
+					},
+					{
+						name:"smiley",
+						icon:"far fa-smile"
+					},
+					{
+						name:"vocal message",
+						icon:"fas fa-microphone"
+					},
+					{
+						name:"take picture",
+						icon:"fas fa-camera"
+					},
+					{
+						name:"Like !",
+						icon:"far fa-thumbs-up"
+					},
+				]
+				return icons;
+			}
+		}
+	}
 </script>
 
 <style>
