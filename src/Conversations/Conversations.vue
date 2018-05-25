@@ -16,7 +16,7 @@ export default {
 
 <style>
 .conversation-mega-container {
-  height: 100vh;
+  height: 95vh;
   padding: 0;
   border-right: 1px solid lightgray;
 }

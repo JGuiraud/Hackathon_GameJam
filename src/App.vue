@@ -1,8 +1,10 @@
 <template>
   <div>
     <navbar/>
-    <conversations/>
-    <chat/>
+    <div class="container-chat-conversation">
+      <conversations/>
+      <chat/>
+    </div>
   </div>
 </template>
 
@@ -21,4 +23,8 @@ export default {
 </script>
 
 <style>
+.container-chat-conversation {
+  display: flex;
+  height: 100vh;
+}
 </style>
