@@ -1,14 +1,18 @@
 <template>
-<h2>jkdjklds</h2>
+  <div>
+    <navbar/>
+
+  </div>
 </template>
 
 <script>
 import Navbar from "./Navbar/Navbar";
-
+import Chat from "./Chat/Chat"
 export default {
   name: "App",
   components: {
-    Navbar
+    Navbar,
+    Chat
   }
 };
 </script>
