@@ -1,5 +1,5 @@
 <template>
-	<div class="container">
+	<div>
 			<div class="col-sm-12 chat-container">
 				<div>
 					<input type="text" class="chat-input" placeholder="Type here...">
@@ -21,7 +21,7 @@
 				const icons = [
 					{
 						name:"add files",
-						icon:"fas fa-copy"
+						icon:"fas fa-clone"
 					},
 					{
 						name:"add files",
@@ -29,19 +29,19 @@
 					},
 					{
 						name:"add files",
-						icon:"add_files"
+						icon:"far fa-smile"
 					},
 					{
 						name:"add files",
-						icon:"add_files"
+						icon:"fas fa-microphone"
 					},
 					{
 						name:"add files",
-						icon:"add_files"
+						icon:"fas fa-camera"
 					},
 					{
 						name:"add files",
-						icon:"add_files"
+						icon:"far fa-thumbs-up"
 					},
 				]
 				return icons;
@@ -52,11 +52,14 @@
 
 <style>
 	.chat-container{
+		margin: 1em 0;
 		border-top: 1px solid #DEDEDE;
 		display: flex;
 		flex-direction: row;
+		justify-content: space-between;
 	}
 	.chat-input{
+		width: 80vw;
 		margin: 0.5em;
 		border: none;
 	}

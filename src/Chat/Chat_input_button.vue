@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<a class="chat_button" href="#" v-for="icon in icons"><i :class="icon.icon"></i></a>
+	<div class="chat-container-button">
+		<a class="chat-button" href="#" v-for="icon in icons"><i :class="icon.icon"></i></a>
 	</div>
 </template>
 
@@ -12,7 +12,11 @@
 </script>
 
 <style>
-	.chat_button{
+	.chat-container-button{
+		padding: .5em;
+	}
+	.chat-button{
 		color:#dedede;
+		padding: 2px;
 	}
 </style>
