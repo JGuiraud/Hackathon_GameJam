@@ -47,15 +47,15 @@
 </script>
 
 <style>
-	.chat-input-container{
-		border-top: 1px solid #DEDEDE;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-	.chat-input{
-		width: 80vw;
-		margin: 0.5em;
-		border: none;
-	}
+.chat-input-container {
+  border-top: 1px solid #dedede;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.chat-input {
+  /* width: 80vw; */
+  margin: 0.5em;
+  border: none;
+}
 </style>
