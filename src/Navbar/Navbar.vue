@@ -20,14 +20,14 @@
                   Accueil
                </p>
             </div>
-            <div>
-               <i class="fas fa-user"></i>
-               <i class="fas fa-user"></i>
-               <i class="fas fa-user"></i>
+            <div class="navbar-action-buttons">
+               <i class="fas fa-user-friends"></i>
+               <i class="fas fa-comments"></i>
+               <i class="fas fa-globe"></i>
             </div>
-            <div>
-               <i class="fas fa-question"></i>
-               <i class="fas fa-arrow"></i>
+            <div class="navbar-action-buttons">
+               <i class="fas fa-question-circle"></i>
+               <i class="fas fa-caret-down"></i>
             </div>
          </div>
       </div>
@@ -58,7 +58,16 @@ export default {};
   color: white;
 }
 .id > img {
-  margin-right: 5px;
+  margin-right: 10px;
+}
+.navbar-action-buttons {
+  margin-left: 10px;
+  padding-right: 10px;
+  border-right: 1px #375188 solid;
+}
+.navbar-action-buttons > i {
+  font-size: 20px;
+  padding: 0 5px 0 5px;
 }
 .id > p {
   margin: 0px;
