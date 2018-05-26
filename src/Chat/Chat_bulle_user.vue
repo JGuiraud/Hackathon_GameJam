@@ -1,19 +1,17 @@
 <template>
-<<<<<<< HEAD
-		<div class="chat-friend">
-			<span class="chat-bulle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum porro exercitationem nostrum quos nemo deleniti natus accusamus commodi eius dignissimos molestiae repudiandae, doloribus neque repellendus sunt vero aliquid necessitatibus, consequuntur in</span>
-		</div>
-=======
-		<ul class="chat-friend" >
-			<li class="chat-bulle" v-for="message in messagesUser">{{message}}</li>
-		</ul>
->>>>>>> 9a80815817607645963e1525f59cd37fa5fbebef
+<div>
+  <div v-for="message in messagesUser">
+      <div class="chat-friend" >
+        <span class="chat-bulle">{{message}}</span>
+      </div>
+  </div>
+</div>
 </template>
 
 <script>
 export default {
   name: "ChatBulleUser",
-  props: ['messagesUser'],
+  props: ["messagesUser"]
 };
 </script>
 

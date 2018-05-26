@@ -3,7 +3,6 @@
       <chat-status-bar/>
       <div class="chat-bulle-container">
          <chat-bulle/>
-<<<<<<< HEAD
          <chat-bulle />
          <chat-bulle/>
          <chat-bulle/>
@@ -38,9 +37,6 @@
          <div class="waiting-area">
             <chat-writing/>
          </div>
-=======
-         <chat-bulle-user :messagesUser="parentMessageData" v-show="parentMessageData.length > 0" />
->>>>>>> 9a80815817607645963e1525f59cd37fa5fbebef
       </div>
       <chat-input :parentMessageData=parentMessageData @interface="sayMessage"/>
    </div>
@@ -60,34 +56,10 @@ export default {
     ChatBulle,
     ChatInput,
     ChatBulleUser,
-<<<<<<< HEAD
     ChatStatusBar,
     ChatWriting
-=======
-    ChatStatusBar
-  },
-  data(){
-    return{
-      parentMessageData: [],
-      messages: [],
-    }
-  },
-  methods: {
-    sayMessage: (event) => {
-      console.log(event)
-      this.messages = event
-    },
-  },
-  computed: {
-    responseMessage: () => {
-      axios.get(`http://localhost:1337/${this.text}`)
-          .then(res => {
-            this.response =  res.data
-      })
-    }
->>>>>>> 9a80815817607645963e1525f59cd37fa5fbebef
   }
-}
+};
 </script>
 
 <style>
