@@ -1,13 +1,18 @@
 <template>
-		<div class="chat-user">
-			<img class="guy" src="../assets/girl.jpeg" alt="">
-			<span class="chat-bulle chat-bulle-user" >hello world</span>
-		</div>
+<div>
+  <div v-for="response in responseMessage">
+    <div class="chat-user">
+      <img class="guy" src="../assets/girl.jpeg" alt="">
+      <span class="chat-bulle chat-bulle-user" >{{response.speech}}</span>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
 export default {
-  name: "ChatBulle"
+  name: "ChatBulle",
+  props: ["responseMessage"]
 };
 </script>
 

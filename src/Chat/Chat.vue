@@ -2,8 +2,8 @@
 	<div class="col-md-9 chat-container" style="padding:0;">
       <chat-status-bar/>
       <div class="chat-bulle-container">
-         <chat-bulle/>
          <chat-bulle-user :messagesUser="parentMessageData" v-show="parentMessageData.length > 0" />
+         <chat-bulle :responseMessage="response" v-show="response.length > 0"/>
       </div>
       <ChatWriting/>
       <chat-input :parentMessageData=parentMessageData @interface="sayMessage"/>
@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 import ChatBulle from "./Chat_bulle";
 import ChatBulleUser from "./Chat_bulle_user";
 import ChatInput from "./Chat_input";
@@ -30,21 +32,22 @@ export default {
   data() {
     return {
       parentMessageData: [],
-      messages: []
+      messages: [],
+      response: []
     };
   },
   methods: {
-    sayMessage: event => {
-      console.log(event);
-      this.messages = event;
+    sayMessage: function(event){
+      this.responseMessage(event)
+    },
+    responseMessage: function(text){
+      var query = text[text.length-1]
+      axios.get(`http://localhost:1337/${query}`).then(res => {
+        this.response.push(res.data);
+      });
     }
   },
   computed: {
-    responseMessage: () => {
-      axios.get(`http://localhost:1337/${this.text}`).then(res => {
-        this.response = res.data;
-      });
-    }
   }
 };
 </script>

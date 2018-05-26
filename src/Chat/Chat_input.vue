@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import ChatInputButton from "./Chat_input_button";
 export default {
   name: "ChatInput",
@@ -35,7 +34,7 @@ export default {
     sendMessage: function() {
       this.messages.push(this.text);
       this.text = "";
-      this.$emit("interfaces", this.messages);
+      this.$emit("interface", this.messages);
     }
   },
   beforeMount() {
