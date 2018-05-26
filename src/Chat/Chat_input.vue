@@ -17,8 +17,7 @@
 			ChatInputButton
 		},
 		computed : {
-			icons: function() {
-				const icons = [
+			icons: () => [
 					{
 						name:"add files",
 						icon:"fas fa-clone"
@@ -40,8 +39,6 @@
 						icon:"far fa-thumbs-up"
 					},
 				]
-				return icons;
-			}
 		}
 	}
 </script>

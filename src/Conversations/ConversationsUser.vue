@@ -1,15 +1,15 @@
 <template>
 	<div>
-      <div class="user-card">
+      <div v-for="user in users" class="user-card">
          <div class="photo">
-            <img src="../assets/girl.jpeg" alt="">
+            <img :src="user.picture" alt="">
          </div>
          <div class="resume-conversation">
-            <p>Esma Seldin</p>
-            <p>Lorem ipsum dolor sit...</p>
+            <p>{{user.name}}</p>
+            <p>{{user.conversation}}</p>
          </div>
          <div class="time">
-            Jeu
+            {{user.time}}
          </div>
       </div>
    </div>
@@ -17,7 +17,9 @@
 
 
 <script>
-export default {};
+export default {
+  props: ['users']
+};
 </script>
 
 

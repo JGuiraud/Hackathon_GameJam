@@ -6,10 +6,7 @@
       <div class="col-md-2 logo-right"><i class="fas fa-pencil-alt"></i></div>
    </div>
    <div class="conversations-users">
-      <conversationsUser/>
-      <conversationsUser/>
-      <conversationsUser/>
-      <conversationsUser/>
+      <conversationsUser :users="users"/>
    </div>
 </div>
 </template>
@@ -20,6 +17,22 @@ export default {
   name: "ConversationsStatusBar",
   components: {
     ConversationsUser
+  },
+  computed: {
+    users: () => [
+      {
+        picture: "~assets//girl.jpeg",
+        name: "Esma Seldin",
+        conversation: "Lorem ipsum dolor sit...",
+        date: "Jeu"
+      },
+      {
+        picture: "../assets/girl.jpeg",
+        name: "Esma Seldin",
+        conversation: "Lorem ipsum dolor sit...",
+        date: "Jeu"
+      }
+    ]
   }
 };
 </script>
