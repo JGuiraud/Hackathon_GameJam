@@ -21,13 +21,13 @@ export default {
   computed: {
     users: () => [
       {
-        picture: "~assets//girl.jpeg",
+        picture: "/static/img/girl.jpeg",
         name: "Esma Seldin",
         conversation: "Lorem ipsum dolor sit...",
         date: "Jeu"
       },
       {
-        picture: "../assets/girl.jpeg",
+        picture: "/static/img/girl.jpeg",
         name: "Esma Seldin",
         conversation: "Lorem ipsum dolor sit...",
         date: "Jeu"
