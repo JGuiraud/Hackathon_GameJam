@@ -40,7 +40,7 @@ export default {
     },
     responseMessage: function(text){
       var query = text[text.length-1]
-      axios.get(`http://localhost:1337/${query}`).then(res => {
+      axios.get(`http://localhost:1337/${query.speech}`).then(res => {
         this.messages.push({user: 'bot', speech : res.data.speech});
       });
     }

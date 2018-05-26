@@ -48,26 +48,6 @@ export default {
   height: 30px;
   border-radius: 50%;
 }
-.merde{
-  /*list-style-type: none;*/
-}
-/*
-.chat-bulle-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.guy {
-  margin-left: 0.5em;
-  height: 30px;
-  border-radius: 50%;
-}
-.chat-friend {
-  display: -webkit-box;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: 0.6em;
-}*/
 ul{
   color: white!important;
 }
