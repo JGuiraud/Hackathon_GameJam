@@ -1,22 +1,26 @@
 <template>
 	<div class="chat-container-button">
-		<a class="chat-button" href="#" v-for="icon in icons"><i :class="icon.icon"></i></a>
+		<i v-for="icon in icons" v-bind:class="icon.icon"></i>
 	</div>
 </template>
 
 <script>
-	export default {
-		name: 'ChatInputButton',
-		props: ['icons']
-	}
+export default {
+  name: "ChatInputButton",
+  props: ["icons"]
+};
 </script>
 
 <style>
-	.chat-container-button{
-		padding: .5em;
-	}
-	.chat-button{
-		color:#dedede;
-		padding: 2px;
-	}
+.chat-container-button {
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.chat-container-button > i {
+  font-size: 20px;
+  padding-left: 10px;
+  color: lightgrey;
+}
 </style>

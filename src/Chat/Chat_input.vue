@@ -49,9 +49,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 0.5em;
 }
 .chat-input {
-  /* width: 80vw; */
+  width: 55vw;
+  height: auto;
   margin: 0.5em;
   border: none;
 }

@@ -1,48 +1,46 @@
 <template>
-	<div class="chat-bulle-container">
-		<div class="chat-friend">
-			<span class="chat-bulle">hello world</span>
-			<img class="guy" src="../assets/guy.jpg" alt="">
-		</div>
 		<div class="chat-user">
-			<img class="guy" src="../assets/guy.jpg" alt="">
-			<span class="chat-bulle">hello world</span>
+			<img class="guy" src="../assets/girl.jpeg" alt="">
+			<span class="chat-bulle chat-bulle-user">hello world</span>
 		</div>
-	</div>
 </template>
 
 <script>
-	export default {
-		name: "ChatBulle"
-	}
+export default {
+  name: "ChatBulle"
+};
 </script>
 
 <style>
-	.chat-bulle-container{
-		height: 84vh;
-		display: flex;
-		justify-content: flex-end;
-		flex-direction: column;
-	}
-	.chat-user{
-		margin-bottom: 1em;
-		margin-left: .6em;
-		/*flex-grow: 1;*/
-	}
-	.chat-bulle{
-		background-color: #DEDEDE;
-		padding: .5em;
-		border-radius: 10px;
-	}
-	.guy {
-		margin-right: .5em;
-  	height: 30px;
-  	border-radius: 50%;
-	}
-	.chat-friend{
-	}
-	.chat-friend>.chat-bulle{
-		background-color:rgb(68, 190, 199);
-		color:#fff;
-	}
+.chat-bulle-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.chat-user {
+  margin-left: 0.6em;
+  margin-top: 0.1em;
+  /*flex-grow: 1;*/
+}
+.chat-bulle {
+  /* padding: 0.5em; */
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 30px;
+  color: rgb(24, 24, 24);
+  font-size: 14px;
+  width: 80%;
+}
+.chat-bulle-user {
+  color: white;
+  background-color: #1787fb;
+}
+.guy {
+  margin-right: 0.5em;
+  height: 30px;
+  border-radius: 50%;
+}
 </style>
