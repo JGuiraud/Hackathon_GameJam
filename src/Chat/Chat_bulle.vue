@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "ChatBulle",
+  name: "ChatBulle"
 };
 </script>
 
@@ -20,7 +20,7 @@ export default {
 }
 .chat-user {
   margin-left: 0.6em;
-  margin-top: 0.1em;
+  margin-top: 0em;
 }
 .chat-bulle {
   padding-top: 0.3em;
@@ -31,10 +31,14 @@ export default {
   color: rgb(24, 24, 24);
   font-size: 14px;
   width: 80%;
+  height: 2.25em;
 }
 .chat-bulle-user {
-  color: white;
-  background-color: #1787fb;
+  color: rgb(32, 32, 32);
+  background-color: #f3f3f3;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-weight: 200;
 }
 .guy {
   margin-right: 0.5em;

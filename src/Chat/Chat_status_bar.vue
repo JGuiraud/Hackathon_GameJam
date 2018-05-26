@@ -24,7 +24,7 @@ export default {};
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgb(226, 226, 226);
-  position: fixed;
+  position: absolute;
   height: 50px;
   width: 75vw;
   display: inline-flex;

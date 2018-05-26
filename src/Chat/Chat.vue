@@ -3,41 +3,9 @@
       <chat-status-bar/>
       <div class="chat-bulle-container">
          <chat-bulle/>
-         <chat-bulle />
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle-user/>
-     
-         
-         <div class="waiting-area">
-            <chat-writing/>
-         </div>
+         <chat-bulle-user :messagesUser="parentMessageData" v-show="parentMessageData.length > 0" />
       </div>
+      <ChatWriting/>
       <chat-input :parentMessageData=parentMessageData @interface="sayMessage"/>
    </div>
       
@@ -58,6 +26,25 @@ export default {
     ChatBulleUser,
     ChatStatusBar,
     ChatWriting
+  },
+  data() {
+    return {
+      parentMessageData: [],
+      messages: []
+    };
+  },
+  methods: {
+    sayMessage: event => {
+      console.log(event);
+      this.messages = event;
+    }
+  },
+  computed: {
+    responseMessage: () => {
+      axios.get(`http://localhost:1337/${this.text}`).then(res => {
+        this.response = res.data;
+      });
+    }
   }
 };
 </script>

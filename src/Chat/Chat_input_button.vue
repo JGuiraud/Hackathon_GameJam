@@ -1,6 +1,6 @@
 <template>
 	<div class="chat-container-button">
-		<i :color="icon.color" v-for="icon in icons" v-bind:class="icon.icon"></i>
+		<i color="" v-for="icon in icons" v-bind:class="icon.icon"></i>
 	</div>
 </template>
 
