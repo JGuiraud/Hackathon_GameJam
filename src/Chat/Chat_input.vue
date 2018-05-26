@@ -10,12 +10,19 @@
 </template>
 
 <script>
+	import axios from 'axios'
 	import	ChatInputButton from "./Chat_input_button"
 	export default {
+		data(){
+			text: ""
+		}
 		name: "ChatInput",
 		components: {
 			ChatInputButton
 		},
+		methods: {
+			sendMessage: () => 
+		}
 		computed : {
 			icons: () => [
 					{
