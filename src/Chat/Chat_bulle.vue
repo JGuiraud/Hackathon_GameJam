@@ -21,10 +21,8 @@ export default {
 .chat-user {
   margin-left: 0.6em;
   margin-top: 0.1em;
-  /*flex-grow: 1;*/
 }
 .chat-bulle {
-  /* padding: 0.5em; */
   padding-top: 0.3em;
   padding-bottom: 0.3em;
   padding-left: 1em;

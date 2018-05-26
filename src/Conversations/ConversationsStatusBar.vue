@@ -56,6 +56,12 @@ export default {
 .conversations-status-bar > .logo-left,
 .logo-right {
   font-size: 25px;
-  color: #4768af;
+  color: #375188;
+}
+.conversations-status-bar > .logo-left {
+  padding-left: 0;
+}
+.conversations-status-bar > .logo-right {
+  padding-right: 0;
 }
 </style>

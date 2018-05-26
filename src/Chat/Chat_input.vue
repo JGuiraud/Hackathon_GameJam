@@ -21,23 +21,28 @@ export default {
       const icons = [
         {
           name: "add files",
-          icon: "fas fa-clone"
+          icon: "fas fa-clone",
+          color: "blue"
         },
         {
           name: "smiley",
-          icon: "far fa-smile"
+          icon: "far fa-smile",
+          color: "blue"
         },
         {
           name: "vocal message",
-          icon: "fas fa-microphone"
+          icon: "fas fa-microphone",
+          color: "blue"
         },
         {
           name: "take picture",
-          icon: "fas fa-camera"
+          icon: "fas fa-camera",
+          color: "blue"
         },
         {
           name: "Like !",
-          icon: "far fa-thumbs-up"
+          icon: "far fa-thumbs-up",
+          color: "blue"
         }
       ];
       return icons;

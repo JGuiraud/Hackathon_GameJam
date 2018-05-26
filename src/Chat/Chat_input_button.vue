@@ -1,6 +1,6 @@
 <template>
 	<div class="chat-container-button">
-		<i v-for="icon in icons" v-bind:class="icon.icon"></i>
+		<i :color="icon.color" v-for="icon in icons" v-bind:class="icon.icon"></i>
 	</div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
 }
 
 .chat-container-button > i {
-  font-size: 20px;
+  font-size: 23px;
   padding-left: 10px;
   color: lightgrey;
 }
