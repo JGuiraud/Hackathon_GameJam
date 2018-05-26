@@ -2,7 +2,7 @@
 	<div>
 			<div class="col-sm-12 chat-input-container">
 				<div>
-					<input type="text" class="chat-input" placeholder="Type here...">
+					<input type="text" v-model="text" @keyup.enter="sendMessage" class="chat-input" placeholder="Type here...">
 				</div>
 				<chat-input-button :icons="icons"/>
 			</div>
@@ -10,45 +10,63 @@
 </template>
 
 <script>
-import ChatInputButton from "./Chat_input_button";
-export default {
-  name: "ChatInput",
-  components: {
-    ChatInputButton
-  },
-  computed: {
-    icons: function() {
-      const icons = [
-        {
-          name: "add files",
-          icon: "fas fa-clone",
-          color: "blue"
-        },
-        {
-          name: "smiley",
-          icon: "far fa-smile",
-          color: "blue"
-        },
-        {
-          name: "vocal message",
-          icon: "fas fa-microphone",
-          color: "blue"
-        },
-        {
-          name: "take picture",
-          icon: "fas fa-camera",
-          color: "blue"
-        },
-        {
-          name: "Like !",
-          icon: "far fa-thumbs-up",
-          color: "blue"
-        }
-      ];
-      return icons;
-    }
-  }
-};
+	import axios from 'axios'
+	import	ChatInputButton from "./Chat_input_button"
+	export default {
+		name: "ChatInput",
+		components: {
+			ChatInputButton
+		},
+		props: {
+			parentMessageData: {
+				type: Array,
+				default(){
+					return ''
+				}
+			}
+		},
+		data(){
+			return {
+				text: "",
+				messages:[]
+			}
+		},
+		methods: {
+			sendMessage: function(){
+				this.messages.push(this.text)
+        this.text = ""
+				this.$emit('interfaces', this.messages)
+
+			}
+		},
+		beforeMount(){
+			this.messages = this.parentMessageData
+		},
+		computed : {
+			icons: () => [
+					{
+						name:"add files",
+						icon:"fas fa-clone"
+					},
+					{
+						name:"smiley",
+						icon:"far fa-smile"
+					},
+					{
+						name:"vocal message",
+						icon:"fas fa-microphone"
+					},
+					{
+						name:"take picture",
+						icon:"fas fa-camera"
+					},
+					{
+						name:"Like !",
+						icon:"far fa-thumbs-up"
+					},
+				]
+		}
+	}
 </script>
 
 <style>
