@@ -17,14 +17,23 @@ export default {
 </script>
 
 <style>
+.merde {
+  padding-left: 1em;
+  padding-right: 1em;
+}
 .chat-bulle-container {
   height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-.chat-user {
+.chat-bulle-container > div {
+  overflow: scroll;
 }
+.chat-user {
+  margin-bottom: 0.7em;
+}
+
 .chat-bulle {
   padding-top: 0.3em;
   padding-bottom: 0.3em;
@@ -42,23 +51,24 @@ export default {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   font-weight: 200;
+  width: auto;
+  display: inline-table;
 }
 .guy {
   margin-right: 0.5em;
   height: 30px;
   border-radius: 50%;
 }
-ul{
-  color: white!important;
+ul {
+  color: white !important;
 }
-ul>li{
 
-}
 .chat-user > .human {
-  background-color: #248af8!important;
+  background-color: #248af8 !important;
   color: white;
   font-weight: 100;
   width: auto;
   float: right;
+  padding-top: 5px;
 }
 </style>

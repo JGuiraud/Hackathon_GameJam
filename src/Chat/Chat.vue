@@ -4,8 +4,8 @@
       <div id="app-chat-bulle-container" class="chat-bulle-container">
          <!-- <chat-bulle-user :messagesUser="parentMessageData" v-show="parentMessageData.length > 0" /> -->
          <chat-bulle :listMessages="messages" v-show="messages.length > 0"/>
-      </div>
       <ChatWriting/>
+      </div>
       <chat-input :parentMessageData="messages" @interface="sayMessage"/>
    </div>
       
@@ -31,22 +31,21 @@ export default {
   },
   data() {
     return {
-      messages: [],
+      messages: []
     };
   },
   methods: {
-    sayMessage: function(event){
-      this.responseMessage(event)
+    sayMessage: function(event) {
+      this.responseMessage(event);
     },
-    responseMessage: function(text){
-      var query = text[text.length-1]
+    responseMessage: function(text) {
+      var query = text[text.length - 1];
       axios.get(`http://localhost:1337/${query.speech}`).then(res => {
-        this.messages.push({user: 'bot', speech : res.data.speech});
+        this.messages.push({ user: "bot", speech: res.data.speech });
       });
     }
   },
-  computed: {
-  }
+  computed: {}
 };
 </script>
 

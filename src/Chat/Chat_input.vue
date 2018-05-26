@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     sendMessage: function() {
-      this.messages.push({user: "human", speech: this.text});
+      this.messages.push({ user: "human", speech: this.text });
       this.text = "";
       this.$emit("interface", this.messages);
     }
@@ -73,7 +73,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 0.2em;
+  /* margin-top: 0.2em; */
 }
 .chat-input {
   width: 55vw;
