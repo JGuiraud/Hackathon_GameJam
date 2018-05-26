@@ -30,7 +30,7 @@ export default {
   margin-right: 0.6em;
 }
 .chat-friend > .chat-bulle {
-  background-color: #ebebeb;
+  background-color: #f3f3f3;
   color: black;
 }
 </style>
