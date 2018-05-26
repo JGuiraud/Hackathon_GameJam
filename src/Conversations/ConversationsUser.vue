@@ -9,7 +9,7 @@
             <p>{{user.conversation}}</p>
          </div>
          <div class="time">
-            {{user.time}}
+            {{user.date}}
          </div>
       </div>
    </div>
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  props: ['users']
+  props: ["users"]
 };
 </script>
 

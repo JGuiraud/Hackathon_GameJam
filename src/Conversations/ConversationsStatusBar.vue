@@ -31,6 +31,48 @@ export default {
         name: "Esma Seldin",
         conversation: "Lorem ipsum dolor sit...",
         date: "Jeu"
+      },
+      {
+        picture: "/static/img/girl.jpeg",
+        name: "Esma Seldin",
+        conversation: "Lorem ipsum dolor sit...",
+        date: "Jeu"
+      },
+      {
+        picture: "/static/img/girl.jpeg",
+        name: "Esma Seldin",
+        conversation: "Lorem ipsum dolor sit...",
+        date: "Jeu"
+      },
+      {
+        picture: "/static/img/girl.jpeg",
+        name: "Esma Seldin",
+        conversation: "Lorem ipsum dolor sit...",
+        date: "Jeu"
+      },
+      {
+        picture: "/static/img/girl.jpeg",
+        name: "Esma Seldin",
+        conversation: "Lorem ipsum dolor sit...",
+        date: "Jeu"
+      },
+      {
+        picture: "/static/img/girl.jpeg",
+        name: "Esma Seldin",
+        conversation: "Lorem ipsum dolor sit...",
+        date: "Jeu"
+      },
+      {
+        picture: "/static/img/girl.jpeg",
+        name: "Esma Seldin",
+        conversation: "Lorem ipsum dolor sit...",
+        date: "Jeu"
+      },
+      {
+        picture: "/static/img/girl.jpeg",
+        name: "Esma Seldin",
+        conversation: "Lorem ipsum dolor sit...",
+        date: "Jeu"
       }
     ]
   }
