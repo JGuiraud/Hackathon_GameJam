@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     sendMessage: function() {
-      this.messages.push(this.text);
+      this.messages.push({user: "human", speech: this.text});
       this.text = "";
       this.$emit("interface", this.messages);
     }

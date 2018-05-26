@@ -1,12 +1,12 @@
 <template>
 	<div class="col-md-9 chat-container" style="padding:0;">
       <chat-status-bar/>
-      <div class="chat-bulle-container">
-         <chat-bulle-user :messagesUser="parentMessageData" v-show="parentMessageData.length > 0" />
-         <chat-bulle :responseMessage="response" v-show="response.length > 0"/>
+      <div id="app-chat-bulle-container" class="chat-bulle-container">
+         <!-- <chat-bulle-user :messagesUser="parentMessageData" v-show="parentMessageData.length > 0" /> -->
+         <chat-bulle :listMessages="messages" v-show="messages.length > 0"/>
       </div>
       <ChatWriting/>
-      <chat-input :parentMessageData=parentMessageData @interface="sayMessage"/>
+      <chat-input :parentMessageData="messages" @interface="sayMessage"/>
    </div>
       
 	<!-- </div> -->
@@ -31,9 +31,7 @@ export default {
   },
   data() {
     return {
-      parentMessageData: [],
       messages: [],
-      response: []
     };
   },
   methods: {
@@ -43,7 +41,7 @@ export default {
     responseMessage: function(text){
       var query = text[text.length-1]
       axios.get(`http://localhost:1337/${query}`).then(res => {
-        this.response.push(res.data);
+        this.messages.push({user: 'bot', speech : res.data.speech});
       });
     }
   },

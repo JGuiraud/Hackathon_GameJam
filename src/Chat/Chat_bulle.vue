@@ -1,18 +1,18 @@
 <template>
 <div>
-  <div v-for="response in responseMessage">
-    <div class="chat-user">
-      <img class="guy" src="../assets/girl.jpeg" alt="">
-      <span class="chat-bulle chat-bulle-user" >{{response.speech}}</span>
-    </div>
-  </div>
+  <ul class="merde">
+      <li class="chat-user" v-for="message in listMessages">
+        <img v-show="message.user === 'bot'" class="guy" src="../assets/girl.jpeg" alt="">
+        <span :class="{human: message.user == 'human'}" class="chat-bulle chat-bulle-user" >{{message.speech}}</span>
+      </li>
+  </ul>
 </div>
 </template>
 
 <script>
 export default {
   name: "ChatBulle",
-  props: ["responseMessage"]
+  props: ["listMessages"]
 };
 </script>
 
@@ -24,8 +24,6 @@ export default {
   justify-content: flex-end;
 }
 .chat-user {
-  margin-left: 0.6em;
-  margin-top: 0em;
 }
 .chat-bulle {
   padding-top: 0.3em;
@@ -49,5 +47,38 @@ export default {
   margin-right: 0.5em;
   height: 30px;
   border-radius: 50%;
+}
+.merde{
+  /*list-style-type: none;*/
+}
+/*
+.chat-bulle-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.guy {
+  margin-left: 0.5em;
+  height: 30px;
+  border-radius: 50%;
+}
+.chat-friend {
+  display: -webkit-box;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 0.6em;
+}*/
+ul{
+  color: white!important;
+}
+ul>li{
+
+}
+.chat-user > .human {
+  background-color: #248af8!important;
+  color: white;
+  font-weight: 100;
+  width: auto;
+  float: right;
 }
 </style>
