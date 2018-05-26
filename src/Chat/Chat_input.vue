@@ -2,7 +2,8 @@
 	<div>
 			<div class="col-sm-12 chat-input-container">
 				<div>
-					<input type="text" class="chat-input" placeholder="Type here...">
+					<input type="text" v-model="text" @keyup.enter="sendMessage" class="chat-input" placeholder="Type here...">
+					{{text}}
 				</div>
 				<chat-input-button :icons="icons"/>
 			</div>
@@ -14,15 +15,23 @@
 	import	ChatInputButton from "./Chat_input_button"
 	export default {
 		data(){
-			text: ""
-		}
+			return {
+				text: ""
+			}
+		},
 		name: "ChatInput",
 		components: {
 			ChatInputButton
 		},
 		methods: {
-			sendMessage: () => 
-		}
+			sendMessage: function(){
+				axios.get(`http://localhost:1337/${this.text}`)
+					.then(data => {
+						console.log(data)
+						this.text = "";
+					})
+			}
+		},
 		computed : {
 			icons: () => [
 					{
