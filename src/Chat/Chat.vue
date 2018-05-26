@@ -3,13 +3,40 @@
       <chat-status-bar/>
       <div class="chat-bulle-container">
          <chat-bulle/>
+         <chat-bulle />
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
+         <chat-bulle/>
          <chat-bulle/>
          <chat-bulle/>
          <chat-bulle/>
          <chat-bulle-user/>
-         <chat-bulle/>
-         <chat-bulle/>
-         <chat-bulle/>
+     
+         
+         <div class="waiting-area">
+            <chat-writing/>
+         </div>
       </div>
       <chat-input/>
    </div>
@@ -22,13 +49,15 @@ import ChatBulle from "./Chat_bulle";
 import ChatBulleUser from "./Chat_bulle_user";
 import ChatInput from "./Chat_input";
 import ChatStatusBar from "./Chat_status_bar";
+import ChatWriting from "./Chat_writing";
 export default {
   name: "Chat",
   components: {
     ChatBulle,
     ChatInput,
     ChatBulleUser,
-    ChatStatusBar
+    ChatStatusBar,
+    ChatWriting
   }
 };
 </script>
