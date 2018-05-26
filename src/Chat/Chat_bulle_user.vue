@@ -1,7 +1,11 @@
 <template>
-		<ul class="chat-friend" >
-			<li class="chat-bulle" v-for="message in messagesUser">{{message}}</li>
-		</ul>
+<div>
+  <div v-for="message in messagesUser">
+      <div class="chat-friend" >
+        <span class="chat-bulle">{{message}}</span>
+      </div>
+  </div>
+</div>
 </template>
 
 <script>
