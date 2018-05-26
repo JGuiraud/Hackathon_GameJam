@@ -1,9 +1,9 @@
 <template>
 <div id="chat-mega-container" style="overflow:auto;">
-   <div v-for="message in messagesUser">
-         <div class="chat-friend" >
-            <span class="chat-bulle">{{message}}</span>
-         </div>
+   <div v-for="message in messagesUser" >
+      <div class="chat-friend" style="margin-top:0.2em;">
+         <span class="chat-bulle">{{message}}</span>
+      </div>
    </div>
 </div>
 </template>
