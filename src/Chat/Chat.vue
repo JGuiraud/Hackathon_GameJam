@@ -36,20 +36,39 @@ export default {
     };
   },
   methods: {
-    sayMessage:function(event) {
+    sayMessage: function(event) {
       var self = this;
-      self.userIsTyping = true
-      setTimeout(function(){self.responseMessage(event)}, 3000);
+      self.userIsTyping = true;
+      setTimeout(function() {
+        self.responseMessage(event);
+      }, 3000);
     },
     responseMessage: function(text) {
-
       var query = text[text.length - 1];
       axios.get(`http://localhost:1337/${query.speech}`).then(res => {
-        this.messages.push({ user: "bot", speech: res.data.speech });
+        if (
+          query.speech == "pourquoi" ||
+          query.speech == "pourquoi ?" ||
+          query.speech == "Pourquoi" ||
+          query.speach == "Pourquoi ?"
+        ) {
+          var self = this;
+          var splitSpeech = res.data.speech.split(".");
+          console.log(splitSpeech.length);
+          for (var i = 0; i < splitSpeech.length; i++) {
+            this.userIsTyping = true;
+            setTimeout(function() {
+              self.messages.push({ user: "bot", speech: splitSpeech[i] });
+              this.userIsTyping = false;
+            });
+          }
+        } else {
+          this.messages.push({ user: "bot", speech: res.data.speech });
+        }
         this.userIsTyping = false;
       });
     }
-  },
+  }
 };
 </script>
 
@@ -64,4 +83,4 @@ export default {
   overflow: scroll;
   height: 100px;
 }
-</style>
+</style> 
