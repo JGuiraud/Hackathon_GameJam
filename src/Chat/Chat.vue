@@ -4,7 +4,7 @@
       <div id="app-chat-bulle-container" class="chat-bulle-container">
          <!-- <chat-bulle-user :messagesUser="parentMessageData" v-show="parentMessageData.length > 0" /> -->
          <chat-bulle :listMessages="messages" v-show="messages.length > 0"/>
-      <ChatWriting/>
+      <ChatWriting v-show="userIsTyping"/>
       </div>
       <chat-input :parentMessageData="messages" @interface="sayMessage"/>
    </div>
@@ -31,21 +31,25 @@ export default {
   },
   data() {
     return {
+      userIsTyping: false,
       messages: []
     };
   },
   methods: {
-    sayMessage: function(event) {
-      this.responseMessage(event);
+    sayMessage:function(event) {
+      var self = this;
+      self.userIsTyping = true
+      setTimeout(function(){self.responseMessage(event)}, 3000);
     },
     responseMessage: function(text) {
+
       var query = text[text.length - 1];
       axios.get(`http://localhost:1337/${query.speech}`).then(res => {
         this.messages.push({ user: "bot", speech: res.data.speech });
+        this.userIsTyping = false;
       });
     }
   },
-  computed: {}
 };
 </script>
 
