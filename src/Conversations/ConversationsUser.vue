@@ -58,6 +58,7 @@ export default {
 }
 .user-card > .photo > img {
   height: 60px;
+  width: 60px;
   border-radius: 50%;
 }
 </style>

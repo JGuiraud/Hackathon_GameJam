@@ -1,9 +1,10 @@
 <template>
   <div>
+   <overlay v-show="finish"/>
     <navbar/>
     <div class="container-chat-conversation">
       <conversations/>
-      <chat/>
+      <chat :finish="finish" @michel="overlay"/>
     </div>
   </div>
 </template>
@@ -12,12 +13,24 @@
 import Navbar from "./Navbar/Navbar";
 import Chat from "./Chat/Chat";
 import Conversations from "./Conversations/Conversations";
+import Overlay from "./Overlay";
 export default {
   name: "App",
   components: {
     Navbar,
     Conversations,
-    Chat
+    Chat,
+    Overlay
+  },
+  data() {
+    return {
+      finish: false
+    };
+  },
+  methods: {
+    overlay: function() {
+      this.finish = true;
+    }
   }
 };
 </script>

@@ -2,7 +2,7 @@
 	<div>
 			<div class="col-sm-12 chat-input-container">
 				<div>
-					<input type="text" v-model="text" @keyup.enter="sendMessage" class="chat-input" placeholder="Écrivez un message...">
+					<input type="text" v-model="text" @keyup.enter="sendMessage" class="chat-input" placeholder="Écrivez un message..." autofocus>
 				</div>
 				<chat-input-button :icons="icons"/>
 			</div>

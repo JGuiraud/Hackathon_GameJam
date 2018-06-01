@@ -1,6 +1,6 @@
 <template>
 <div class="container-typing">
-      <img class="girl-typing" src="../assets/girl.jpeg" alt="">
+      <img class="girl-typing" src="../assets/guy2.jpeg" alt="">
    <div class="fb-chat">
       <div class="fb-chat--bubbles">
          <span></span>

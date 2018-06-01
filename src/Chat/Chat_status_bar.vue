@@ -2,7 +2,7 @@
 	<div class="chat-status-bar">
       <div class="empty"></div>
       <div class="chat-status-bar-name">
-         <p>Jean Bon</p>
+         <p>Gage Burnett</p>
          <p>Actif Maintenant</p>
       </div>
       <div class="action-buttons-chat">

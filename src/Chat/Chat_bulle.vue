@@ -2,8 +2,8 @@
 <div>
   <ul class="merde">
       <li class="chat-user" v-for="message in listMessages">
-        <img v-show="message.user === 'bot'" class="guy" src="../assets/girl.jpeg" alt="">
-        <span :class="{human: message.user == 'human', bot: message.user == 'bot', resize: message.speech.length > 50}" class="chat-bulle chat-bulle-user" >{{message.speech}}</span>
+        <img v-show="message.user === 'bot'" class="guy" src="../assets/guy2.jpeg" alt="">
+        <span :class="{human: message.user == 'human', bot: message.user == 'bot', resize: message.speech.length > 60}" class="chat-bulle chat-bulle-user" >{{message.speech}}</span>
       </li>
   </ul>
 </div>
@@ -62,7 +62,7 @@ export default {
 ul {
   color: white !important;
 }
-.resize{
+.resize {
   width: 75%;
 }
 .chat-user > .human {
